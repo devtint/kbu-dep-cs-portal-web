@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* KBU visual system: replace these temporary values when official brand assets are supplied. */
+@theme {
+  --color-kbu-primary: #e0824b;
+  --color-kbu-primary-hover: #c96c39;
+  --color-kbu-orange: #e0824b;
+  --color-kbu-orange-soft: #f2b18c;
+  --color-kbu-selection: #ffe6d5;
+  --color-kbu-mist: #eef4f7;
+  --color-kbu-border: #b9cad7;
+  --color-kbu-surface: #f8fafc;
+}
+
+:root {
+  --background: var(--color-kbu-surface);
+  --foreground: #334155;
+  --kbu-primary: var(--color-kbu-primary);
+  --kbu-primary-hover: var(--color-kbu-primary-hover);
+  --kbu-accent: var(--color-kbu-orange);
+  --kbu-accent-soft: var(--color-kbu-orange-soft);
+  --kbu-surface-muted: var(--color-kbu-mist);
+  --kbu-border: var(--color-kbu-border);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+::selection {
+  background: var(--color-kbu-selection);
+  color: #7c2d12;
+}
+
+/* Named classes keep future pages on-brand without repeating raw hex values. */
+.kbu-primary {
+  color: var(--kbu-primary);
+}
+.kbu-primary-bg {
+  background-color: var(--kbu-primary);
+}
+.kbu-accent {
+  color: var(--kbu-accent);
+}
+.kbu-accent-bg {
+  background-color: var(--kbu-accent);
+}
+.kbu-surface-muted {
+  background-color: var(--kbu-surface-muted);
+}
+.kbu-border {
+  border-color: var(--kbu-border);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+.page-shell {
+  width: min(100% - 3rem, 1180px);
+  margin-inline: auto;
+}
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 2rem, 1180px);
+  }
+}
+.eyebrow {
+  color: #e0824b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
