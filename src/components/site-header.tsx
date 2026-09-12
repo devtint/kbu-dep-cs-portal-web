@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-kbu-surface/90 backdrop-blur-lg">
       <div className="page-shell flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Image src="/images/logo.png" alt="KBU Logo" width={40} height={40} />
+          <Image src="/brand/kbu-logo.png" alt="KBU Logo" width={40} height={40} />
           <span className="hidden text-sm font-semibold leading-tight text-slate-800 sm:block">
             Computer Science
             <br />

@@ -27,7 +27,25 @@ V1 content is local and typed. Edit `src/content/site-data.ts` to update announc
 
 ## Team workflow
 
-Create a focused branch from `main`, for example `feature/events-page` or `fix/mobile-navigation`. Open a pull request with a short summary and screenshots for visual changes. Before requesting review, run `npm run lint`, `npm run typecheck`, and `npm run build`.
+The default branch is `main`. Use this flow:
+
+```text
+feature/* → dev → main
+```
+
+- `main` — stable, production-ready code
+- `dev` — shared integration branch
+- `feature/*` — individual developer work
+
+Create feature branches from `dev`, for example `feature/events-page` or `fix/mobile-navigation`:
+
+```bash
+git switch dev
+git pull origin dev
+git switch -c feature/events-page
+```
+
+Open a pull request from `feature/*` into `dev`. After testing and review, open a pull request from `dev` into `main`. Protect both branches and require pull-request review. Before requesting review, run `npm run lint`, `npm run typecheck`, and `npm run build`.
 
 ## Pre-commit checks
 

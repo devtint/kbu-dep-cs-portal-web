@@ -1,6 +1,6 @@
 import type { Announcement, DepartmentHighlight, Event, Resource } from "@/lib/types";
 
-const placeholderImage = "/images/logo.png";
+const placeholderImage = "/brand/kbu-logo.png";
 
 export const announcements: Announcement[] = [
   {

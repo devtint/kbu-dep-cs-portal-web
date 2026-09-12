@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="page-shell grid gap-10 py-12 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <Image src="/images/logo.png" alt="KBU Logo" width={32} height={32} />
+            <Image src="/brand/kbu-logo.png" alt="KBU Logo" width={32} height={32} />
             <span className="font-semibold text-kbu-primary">Computer Science</span>
           </div>
           <p className="max-w-sm text-sm leading-6 text-slate-500">
