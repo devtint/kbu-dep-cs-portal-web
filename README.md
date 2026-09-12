@@ -1,6 +1,6 @@
 # KBU CS Department Portal Web
 
-The public web portal for the KBU Faculty of Science Computer Science community.
+The public web portal for Computer Science Department of Kasem Bundit University.
 
 ## Getting started
 
