@@ -151,6 +151,7 @@ export default function StudentBenefitsPage() {
               <button
                 key={cat}
                 type="button"
+                aria-pressed={isActive}
                 onClick={() => setSelectedCategory(cat)}
                 className={`shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
                   isActive

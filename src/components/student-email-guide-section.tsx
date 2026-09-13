@@ -15,10 +15,21 @@ import {
 export function StudentEmailGuideSection() {
   const [copied, setCopied] = useState(false);
 
-  const copyEmailFormat = () => {
-    navigator.clipboard.writeText("uxxxxxxxxxxxx@ms.kbu.ac.th");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const copyEmailFormat = async () => {
+    try {
+      await navigator.clipboard.writeText("uxxxxxxxxxxxx@ms.kbu.ac.th");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      const textarea = document.createElement("textarea");
+      textarea.value = "uxxxxxxxxxxxx@ms.kbu.ac.th";
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
   return (
@@ -33,9 +44,19 @@ export function StudentEmailGuideSection() {
               <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
             </div>
             <div>
-              <span className="eyebrow text-[10px] sm:text-xs">
-                Official KBU Student Verification
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="eyebrow text-[10px] sm:text-xs">
+                  Official KBU Student Verification
+                </span>
+                {"postedDate" in studentEmailGuide && (
+                  <>
+                    <span className="text-slate-300">•</span>
+                    <span className="text-[10px] text-slate-400 sm:text-xs">
+                      Posted on {(studentEmailGuide as { postedDate?: string }).postedDate}
+                    </span>
+                  </>
+                )}
+              </div>
               <h2 className="text-base font-bold text-slate-800 sm:text-xl">
                 How to Access Your KBU Student Email
               </h2>

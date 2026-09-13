@@ -116,6 +116,7 @@ export const studentEmailGuide = {
   portalName: "Microsoft 365 Outlook Webmail",
   portalUrl: "https://outlook.cloud.microsoft/mail/",
   formatExample: "uxxxxxxxxxxxx@ms.kbu.ac.th",
+  postedDate: "13 September 2026",
   description:
     "All enrolled KBU students receive a Microsoft 365 educational email account. This email is your primary key to unlocking thousands of dollars in free student developer tools, cloud credits, AI subscriptions, and software licenses.",
   steps: [
@@ -147,7 +148,7 @@ export const studentEmailGuide = {
   tips: [
     "Always check both 'Focused' and 'Other' or 'Junk' tabs for verification emails.",
     "Keep your university email active throughout your study semesters to maintain automatic yearly license renewals.",
-    "If you have trouble logging in, contact the KBU Computing and Technology Center (CTC) helpdesk.",
+    "If you have trouble logging in or need a password reset, visit the KBU Computing and Technology Center (CTC) on-campus helpdesk or contact student IT support.",
   ],
 };
 
